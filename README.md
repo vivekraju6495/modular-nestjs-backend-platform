@@ -30,6 +30,7 @@ This platform follows a **library-first modular architecture**. Each domain libr
 * Controllers (REST APIs)
 * Services (business logic)
 * Modules
+* Migrations
 * DTOs & validations
 
 There is **no monolithic API layer**.
@@ -109,10 +110,28 @@ docker-compose up --build
 * API: `http://localhost:3000`
 * Swagger docs: `http://localhost:3000/api/docs` *(to be added later)*
 
-> ⚠️ Make sure your `.env` file has service names for Docker:
->
-> * `DB_HOST=postgres`
-> * `REDIS_URL=redis://redis:6379`
+## ⚠️ Before You Start
+
+Before running the project, make sure to:
+
+1. Copy `.env.example` to `.env` and configure your environment variables.
+2. If using Docker, ensure service names are correct in `.env`:
+
+   ```bash
+   DB_HOST=postgres
+   REDIS_URL=redis://redis:6379
+
+3. Run the database migrations to create all necessary tables:
+    # Using NestJS/TypeORM
+    npm run migration:run
+
+    # Or using TypeORM CLI
+    npx typeorm migration:run
+
+4. After migrations are successful, start the application:
+
+    ```bash
+    docker-compose up --build
 
 ---
 
@@ -125,10 +144,15 @@ You can use the Postman collection to test all APIs of this modular backend plat
 - Make sure your `.env` is configured correctly
 - Run the APIs directly
 
-> 🔹 Note: Each library has its own endpoints and health check APIs (auth, auth-roles, contacts, email, emailer, company-profile)
+> 🔹 Note: Each library has its own endpoints and also included health check APIs (auth, auth-roles, contacts, email, emailer, company-profile)
 
 ---
 
+## 📄 Documents
+
+Libraries Document are mentioned in the folder path `docs/libraries`
+
+---
 ## 📄 Environment Variables
 
 Add a `.env` file in the root of your project. You can copy from `.env.example`:
