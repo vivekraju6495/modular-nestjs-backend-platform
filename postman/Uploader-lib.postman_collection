@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "aba643b3-167d-4f1d-9af4-28a9251e745b",
+		"name": "Uploader",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13669807",
+		"_collection_link": "https://modular-8519.postman.co/workspace/Modular-Framework~9b55a927-12cd-4e7c-a1f0-fd94130eb8c9/collection/13669807-aba643b3-167d-4f1d-9af4-28a9251e745b?action=share&source=collection_link&creator=13669807"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1f097041-e631-4a40-a39f-80075ea50502"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/uploader/upload?path=template",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"uploader",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "path",
+							"value": "template"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Welcome-Uploader",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/uploader",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"uploader"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

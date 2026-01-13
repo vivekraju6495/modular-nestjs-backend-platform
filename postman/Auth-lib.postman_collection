@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "7754f9f3-56e9-49b6-89c6-d0a4869c9812",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13669807",
+		"_collection_link": "https://modular-8519.postman.co/workspace/Modular-Framework~9b55a927-12cd-4e7c-a1f0-fd94130eb8c9/collection/13669807-7754f9f3-56e9-49b6-89c6-d0a4869c9812?action=share&source=collection_link&creator=13669807"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vinu32@yopmail.com\",\r\n  \"password\": \"Pass1234\",\r\n  \"phone\": \"8714334675\",\r\n  \"whatsapp\": \"8714334679\",\r\n  \"firstName\": \"vinu\",\r\n  \"lastName\": \"Raju\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vivek951@yopmail.com\",\r\n  \"password\": \"Pass1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sent-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vivek95@yopmail.com\",\r\n  \"phone\": \"8714334677\",\r\n  \"type\": \"email\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/sent-otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"sent-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vivek951@yopmail.com\",\r\n  \"phone\": \"8714334677\",\r\n  \"otp\": \"376513\",\r\n  \"type\": \"email\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/verify-otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Welcome-Auth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify-Registration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/verify?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsImlhdCI6MTc1ODE3NzU2NCwiZXhwIjoxNzU4MjYzOTY0fQ.SQF9vDJijHu2jQbsrT4pzdpwJRj6Ttlfm8-cx_BYeK4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsImlhdCI6MTc1ODE3NzU2NCwiZXhwIjoxNzU4MjYzOTY0fQ.SQF9vDJijHu2jQbsrT4pzdpwJRj6Ttlfm8-cx_BYeK4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsInBob25lIjoiODcxNDMzNDY3MSIsIndoYXRzYXBwIjoiODcxNDMzNDY3OCIsImZpcnN0TmFtZSI6InZpdmVrIiwibWlkZGxlTmFtZSI6IiIsImxhc3ROYW1lIjoiUmFqdSIsImlhdCI6MTc1OTk0NzI5NSwiZXhwIjoxNzU5OTQ3MzMxfQ.Ek5i1qNSioRYcBHOYHoasY20EdcfK8DAd87k98NilHA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsInBob25lIjoiODcxNDMzNDY3MSIsIndoYXRzYXBwIjoiODcxNDMzNDY3OCIsImZpcnN0TmFtZSI6InZpdmVrIiwibWlkZGxlTmFtZSI6IiIsImxhc3ROYW1lIjoiUmFqdSIsInJvbGUiOiJhZG1pbiIsInBlcm1pc3Npb25zIjpbeyJrZXkiOiJBTEwtQVBJcyIsIm1ldGhvZCI6IkFMTC1BUElzIiwiY29kZSI6IkFMTCIsImRlc2NyaXB0aW9uIjoiQWxsIGFwaSBwZXJtaXNzaW9ucyIsInN0YXR1cyI6dHJ1ZX1dLCJpYXQiOjE3NTk5NDcxNjAsImV4cCI6MTc1OTk0NzE5Nn0.vqa6H6btj9xYUzTFULXUe42ImAmCTeO9kJ6lv5b4dAM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

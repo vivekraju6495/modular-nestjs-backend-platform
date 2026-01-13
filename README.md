@@ -116,6 +116,19 @@ docker-compose up --build
 
 ---
 
+## 📬 Postman Collection
+
+You can use the Postman collection to test all APIs of this modular backend platform:
+
+- Download the collection: [postman/modular-nestjs-backend.postman_collection.json](./postman/modular-nestjs-backend.postman_collection.json)
+- Import it into Postman
+- Make sure your `.env` is configured correctly
+- Run the APIs directly
+
+> 🔹 Note: Each library has its own endpoints and health check APIs (auth, auth-roles, contacts, email, emailer, company-profile)
+
+---
+
 ## 📄 Environment Variables
 
 Add a `.env` file in the root of your project. You can copy from `.env.example`:

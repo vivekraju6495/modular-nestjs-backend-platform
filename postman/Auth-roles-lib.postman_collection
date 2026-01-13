@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "1f99d804-cf70-4fac-9815-5248e9e02de0",
+		"name": "Auth-roles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13669807",
+		"_collection_link": "https://modular-8519.postman.co/workspace/Modular-Framework~9b55a927-12cd-4e7c-a1f0-fd94130eb8c9/collection/13669807-1f99d804-cf70-4fac-9815-5248e9e02de0?action=share&source=collection_link&creator=13669807"
+	},
+	"item": [
+		{
+			"name": "create-user-roles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxYWNjN2EwMi0yNDZhLTRjY2EtODU3ZC0yYWI5Y2ZjODM1ZWMiLCJlbWFpbCI6InZpdmVrOTUxQHlvcG1haWwuY29tIiwicGhvbmUiOiI4NzE0MzM0NjcxIiwid2hhdHNhcHAiOiI4NzE0MzM0Njc4IiwiZmlyc3ROYW1lIjoidml2ZWsiLCJtaWRkbGVOYW1lIjoiIiwibGFzdE5hbWUiOiJSYWp1IiwiaWF0IjoxNzU5MTQyNzM3LCJleHAiOjE3NTkxNzg3Mzd9.eTJB5OmTGjzM884ibpTrZi4Pk7AbCUaqtoEAIFcDt3k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth-roles/roles/create",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth-roles",
+						"roles",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Welocome-Auth-roles",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/auth-roles",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth-roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-permissions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"all\",\r\n    \"code\":\"ALL\",\r\n    \"key\":\"ALL-APIs\",\r\n    \"description\":\"All api permissions\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth-roles/permission/create",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth-roles",
+						"permission",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assign-user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsInBob25lIjoiODcxNDMzNDY3MSIsIndoYXRzYXBwIjoiODcxNDMzNDY3OCIsImZpcnN0TmFtZSI6InZpdmVrIiwibWlkZGxlTmFtZSI6IiIsImxhc3ROYW1lIjoiUmFqdSIsImlhdCI6MTc1OTE0NzcwNywiZXhwIjoxNzU5MTgzNzA3fQ.5q8eNGxnZIK5zShVG_lzwOLp2PkwjiXTBJSN1TBaYvY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth-roles/assign-user",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth-roles",
+						"assign-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assign-permission",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsInBob25lIjoiODcxNDMzNDY3MSIsIndoYXRzYXBwIjoiODcxNDMzNDY3OCIsImZpcnN0TmFtZSI6InZpdmVrIiwibWlkZGxlTmFtZSI6IiIsImxhc3ROYW1lIjoiUmFqdSIsImlhdCI6MTc1OTE0NzcwNywiZXhwIjoxNzU5MTgzNzA3fQ.5q8eNGxnZIK5zShVG_lzwOLp2PkwjiXTBJSN1TBaYvY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleId\": 1,\r\n    \"permissionId\": 1\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth-roles/assign-permission",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth-roles",
+						"assign-permission"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
