@@ -1,0 +1,6 @@
+email,firstName,lastName,number,companyName,address,address1,address2,city,state,zipcode,country,birthday,permission
+john.sam@yopmail.com,John,Sam,1234567890,ABC Corp,123 Main St,Suite 1,Floor 2,New York,NY,10001,USA,01-01-1990,opted-in
+james.smith@mailinator.com,James,Smith,9876543210,XYZ Ltd,456 Elm St,Apt 4,,Los Angeles,CA,90001,USA,15-05-1985,opted-in
+mike.ross@yopmail.com,Mike,Ross,5556667777,Pearson Hardman,789 Pine St,,,Chicago,IL,60601,USA,22-08-1992,opted-in
+rachel.john@mailinator.com,Rachel,John,4445556666,Specter Litt,321 Oak St,Block B,Unit 3,Houston,TX,77001,USA,05-12-1991,opted-in
+harvey.specter@yopmail.com,Harvey,Specter,3332221111,Specter Law,654 Maple Ave,,,Boston,MA,2101,USA,10-03-1980,opted-in

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true
+  },
+  "projects": {
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
+      }
+    },
+    "auth-roles": {
+      "type": "library",
+      "root": "libs/auth-roles",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth-roles/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth-roles/tsconfig.lib.json"
+      }
+    },
+    "company-profile": {
+      "type": "library",
+      "root": "libs/company-profile",
+      "entryFile": "index",
+      "sourceRoot": "libs/company-profile/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/company-profile/tsconfig.lib.json"
+      }
+    },
+    "contacts": {
+      "type": "library",
+      "root": "libs/contacts",
+      "entryFile": "index",
+      "sourceRoot": "libs/contacts/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/contacts/tsconfig.lib.json"
+      }
+    },
+    "emailer": {
+      "type": "library",
+      "root": "libs/emailer",
+      "entryFile": "index",
+      "sourceRoot": "libs/emailer/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/emailer/tsconfig.lib.json"
+      }
+    },
+    "logger": {
+      "type": "library",
+      "root": "libs/logger",
+      "entryFile": "index",
+      "sourceRoot": "libs/logger/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/logger/tsconfig.lib.json"
+      }
+    },
+    "queue-manager": {
+      "type": "library",
+      "root": "libs/queue-manager",
+      "entryFile": "index",
+      "sourceRoot": "libs/queue-manager/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/queue-manager/tsconfig.lib.json"
+      }
+    },
+    "uploader": {
+      "type": "library",
+      "root": "libs/uploader",
+      "entryFile": "index",
+      "sourceRoot": "libs/uploader/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/uploader/tsconfig.lib.json"
+      }
+    }
+  }
+}

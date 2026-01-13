@@ -1,0 +1,81 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolvePackageJsonExports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2023",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/auth": [
+        "libs/auth/src"
+      ],
+      "@app/auth-roles": [
+        "libs/auth-roles/src"
+      ],
+      "@app/auth-roles/*": [
+        "libs/auth-roles/src/*"
+      ],
+      "@app/auth/*": [
+        "libs/auth/src/*"
+      ],
+      "@app/company-profile": [
+        "libs/company-profile/src"
+      ],
+      "@app/company-profile/*": [
+        "libs/company-profile/src/*"
+      ],
+      "@app/contacts": [
+        "libs/contacts/src"
+      ],
+      "@app/contacts/*": [
+        "libs/contacts/src/*"
+      ],
+      "@app/email": [
+        "libs/email/src"
+      ],
+      "@app/email/*": [
+        "libs/email/src/*"
+      ],
+      "@app/emailer": [
+        "libs/emailer/src"
+      ],
+      "@app/emailer/*": [
+        "libs/emailer/src/*"
+      ],
+      "@app/logger": [
+        "libs/logger/src"
+      ],
+      "@app/logger/*": [
+        "libs/logger/src/*"
+      ],
+      "@app/queue-manager": [
+        "libs/queue-manager/src"
+      ],
+      "@app/queue-manager/*": [
+        "libs/queue-manager/src/*"
+      ],
+      "@app/uploader": [
+        "libs/uploader/src"
+      ],
+      "@app/uploader/*": [
+        "libs/uploader/src/*"
+      ]
+    }
+  }
+}

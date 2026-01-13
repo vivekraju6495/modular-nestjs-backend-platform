@@ -1,0 +1,31 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/auth": "<rootDir>/../libs/auth/src",
+    "@app/auth-roles": "<rootDir>/../libs/auth-roles/src",
+    "@app/auth-roles/(.*)": "<rootDir>/../libs/auth-roles/src/$1",
+    "@app/auth/(.*)": "<rootDir>/../libs/auth/src/$1",
+    "@app/company-profile": "<rootDir>/../libs/company-profile/src",
+    "@app/company-profile/(.*)": "<rootDir>/../libs/company-profile/src/$1",
+    "@app/contacts": "<rootDir>/../libs/contacts/src",
+    "@app/contacts/(.*)": "<rootDir>/../libs/contacts/src/$1",
+    "@app/emailer": "<rootDir>/../libs/emailer/src",
+    "@app/emailer/(.*)": "<rootDir>/../libs/emailer/src/$1",
+    "@app/logger": "<rootDir>/../libs/logger/src",
+    "@app/logger/(.*)": "<rootDir>/../libs/logger/src/$1",
+    "@app/queue-manager": "<rootDir>/../libs/queue-manager/src",
+    "@app/queue-manager/(.*)": "<rootDir>/../libs/queue-manager/src/$1",
+    "@app/uploader": "<rootDir>/../libs/uploader/src",
+    "@app/uploader/(.*)": "<rootDir>/../libs/uploader/src/$1"
+  }
+}
