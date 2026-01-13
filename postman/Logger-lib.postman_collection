@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "d0b990bd-3536-4f5a-8520-36fffd82fc35",
+		"name": "Logger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13669807",
+		"_collection_link": "https://modular-8519.postman.co/workspace/Modular-Framework~9b55a927-12cd-4e7c-a1f0-fd94130eb8c9/collection/13669807-d0b990bd-3536-4f5a-8520-36fffd82fc35?action=share&source=collection_link&creator=13669807"
+	},
+	"item": [
+		{
+			"name": "Health checker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/logger",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"logger"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "18befe43-42d1-45e5-bd93-6fd5e0a23eb5",
+		"name": "Contact",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13669807",
+		"_collection_link": "https://modular-8519.postman.co/workspace/Modular-Framework~9b55a927-12cd-4e7c-a1f0-fd94130eb8c9/collection/13669807-18befe43-42d1-45e5-bd93-6fd5e0a23eb5?action=share&source=collection_link&creator=13669807"
+	},
+	"item": [
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/contacts",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"john2.doe3@yopmail.com\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe3\",\r\n  \"address\": \"123 Main Street\",\r\n  \"address1\": \"Apt 4B\",\r\n  \"address2\": \"Near Central Park\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"NY\",\r\n  \"zipcode\": \"10001\",\r\n  \"country\": \"USA\",\r\n  \"number\": \"+1-555-123-4568\",\r\n  \"birthday\": \"1990-05-15\",\r\n  \"companyName\": \"Acme Corporation\",\r\n  \"tags\": [\"vip\", \"newsletter\", \"beta-user\"],\r\n  \"permission\": \"opted-in\",  // opted-out\r\n  \"isSubscribed\": true,  //optional by default true\r\n  \"status\": true //optional by default true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/contacts/create",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"john.doe3@yopmail.com\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Down\",\r\n  \"address\": \"123 Main Street\",\r\n  \"address1\": \"Apt 4B\",\r\n  \"address2\": \"Near Central Park\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"NY\",\r\n  \"zipcode\": \"10001\",\r\n  \"country\": \"USA\",\r\n  \"number\": \"+1-555-123-4563\",\r\n  \"birthday\": \"1990-05-15\",\r\n  \"companyName\": \"Acme Corporation\",\r\n  \"tags\": [\"vip\", \"newsletter\", \"beta-user\"],\r\n  \"permission\": \"opted-in\",  // opted-out\r\n  \"isSubscribed\": true,  //optional by default true\r\n  \"status\": true //optional by default true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/contacts/update/f29dd79b-1aee-48fb-8072-81938a70b7dc",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacts",
+						"update",
+						"f29dd79b-1aee-48fb-8072-81938a70b7dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseURL}}/contacts/list?page=1&limit=10&search=john&permission=opted-in&status=true&order=DESC",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacts",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "search",
+							"value": "john"
+						},
+						{
+							"key": "permission",
+							"value": "opted-in"
+						},
+						{
+							"key": "status",
+							"value": "true"
+						},
+						{
+							"key": "order",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/contacts/view/f29dd79b-1aee-48fb-8072-81938a70b7dc",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacts",
+						"view",
+						"f29dd79b-1aee-48fb-8072-81938a70b7dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/contacts/delete/f29dd79b-1aee-48fb-8072-81938a70b7dc",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacts",
+						"delete",
+						"f29dd79b-1aee-48fb-8072-81938a70b7dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk-upload",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1f094af3-012e-4e20-83d7-21d53e7eced3"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1f094af3-6752-4580-a269-74ccbda71bf8",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/contacts/bulk-upload",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacts",
+						"bulk-upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Country",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"name\": \"Welcome Email Template\",\r\n  \"description\": \"This template is used for welcoming new users\",\r\n  \"model\": [\r\n    { \"type\": \"heading\", \"content\": \"Welcome to Our Service!\" },\r\n    { \"type\": \"paragraph\", \"content\": \"We are excited to have you on board. Get started by exploring our features.\" },\r\n    {\r\n      \"type\": \"button\",\r\n      \"content\": \"Get Started\",\r\n      \"url\": \"https://example.com\",\r\n      \"backgroundColor\": \"#007bff\",\r\n      \"textColor\": \"#ffffff\"\r\n    }\r\n  ],\r\n  \"html\": \"<html><body><h1>Welcome to Our Service!</h1></body></html>\",\r\n  \"layout\": {\r\n    \"backdropColor\": \"#F2F5F7\",\r\n    \"canvasColor\": \"#FFFFFF\",\r\n    \"canvasBorderColor\": \"#e5e7eb\",\r\n    \"canvasBorderRadius\": 8,\r\n    \"textColor\": \"#242424\",\r\n    \"fontFamily\": \"Inter, Arial, sans-serif\",\r\n    \"padding\": 20\r\n  },\r\n  \"version\": \"draft\",\r\n  \"is_published\": false,\r\n  \"thumbnail_url\": \"https://example.com/thumb.png\",\r\n  \"type\": \"default\",\r\n  \"status\": true,\r\n\r\n  \"updated_by\": null\r\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/contacts/country?search=United",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacts",
+						"country"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "United"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,799 @@
+{
+	"info": {
+		"_postman_id": "91a53d67-942d-41ff-a013-e56b4c3ebc90",
+		"name": "Emailer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13669807",
+		"_collection_link": "https://modular-8519.postman.co/workspace/Modular-Framework~9b55a927-12cd-4e7c-a1f0-fd94130eb8c9/collection/13669807-91a53d67-942d-41ff-a013-e56b4c3ebc90?action=share&source=collection_link&creator=13669807"
+	},
+	"item": [
+		{
+			"name": "Elements",
+			"item": [
+				{
+					"name": "Welcome-email-elements",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/list",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"list"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "default",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Elements",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"groupId\": \"e9e90791-8590-4b3f-9263-70cf0bad9433\",\r\n  \"name\": \"Heading Tag\",\r\n  \"block\": \"<h1></h1>\",\r\n  \"attributes\": \"{\\\"color\\\":,\\\"font\\\":}\",\r\n  \"thumbnail\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/create",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reorder",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"groupId\": \"4e3dbd5a-ee60-4462-8185-50eb81da4575\",\r\n  \"elementIds\": [\"92cca102-d741-47d8-b683-27a5efb61aaa\",\"58b6f1fa-92af-4d7f-b09e-c9e3b1f06985\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/reorder",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"reorder"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "default",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Elements",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"groupId\": \"5dbf9e16-09c1-4cbc-b7bf-148ac553e83f\",\r\n  \"name\": \"Heading Tag\",\r\n  \"block\": \"<p></p>\",\r\n  \"attributes\": \"{\\\"color\\\":,\\\"font\\\":}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/update/58b6f1fa-92af-4d7f-b09e-c9e3b1f06985",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"update",
+								"58b6f1fa-92af-4d7f-b09e-c9e3b1f06985"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View-Elements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"groupId\": \"5dbf9e16-09c1-4cbc-b7bf-148ac553e83f\",\r\n  \"name\": \"Heading Tag\",\r\n  \"block\": \"<p></p>\",\r\n  \"attributes\": \"{\\\"color\\\":,\\\"font\\\":}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/58b6f1fa-92af-4d7f-b09e-c9e3b1f06985",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"58b6f1fa-92af-4d7f-b09e-c9e3b1f06985"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Element",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/delete/58b6f1fa-92af-4d7f-b09e-c9e3b1f06985",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"delete",
+								"58b6f1fa-92af-4d7f-b09e-c9e3b1f06985"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Templates",
+			"item": [
+				{
+					"name": "Welcome-email-templates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/templates",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"templates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create email template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"name\": \"Welcome Email Template\",\r\n  \"description\": \"This template is used for welcoming new users\",\r\n  \"model\": [\r\n    { \"type\": \"heading\", \"content\": \"Welcome to Our Service!\" },\r\n    { \"type\": \"paragraph\", \"content\": \"We are excited to have you on board. Get started by exploring our features.\" },\r\n    {\r\n      \"type\": \"button\",\r\n      \"content\": \"Get Started\",\r\n      \"url\": \"https://example.com\",\r\n      \"backgroundColor\": \"#007bff\",\r\n      \"textColor\": \"#ffffff\"\r\n    }\r\n  ],\r\n  \"html\": \"<html><body><h1>Welcome to Our Service!</h1></body></html>\",\r\n  \"layout\": {\r\n    \"backdropColor\": \"#F2F5F7\",\r\n    \"canvasColor\": \"#FFFFFF\",\r\n    \"canvasBorderColor\": \"#e5e7eb\",\r\n    \"canvasBorderRadius\": 8,\r\n    \"textColor\": \"#242424\",\r\n    \"fontFamily\": \"Inter, Arial, sans-serif\",\r\n    \"padding\": 20\r\n  },\r\n  \"version\": \"draft\",\r\n  \"is_published\": false,\r\n  \"thumbnail_url\": \"https://example.com/thumb.png\",\r\n  \"type\": \"default\",\r\n  \"status\": true,\r\n\r\n  \"updated_by\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/templates/create",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"templates",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List email template",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/templates/list?page=1&limit=5&search=welcome&version=draft&type=default",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"templates",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "search",
+									"value": "welcome"
+								},
+								{
+									"key": "version",
+									"value": "draft"
+								},
+								{
+									"key": "type",
+									"value": "default"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update email template",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": null,              \r\n  \"name\": \"Welcome\",\r\n  \"description\": \"This template is used for welcoming new users\",\r\n  \"model\": {\r\n    \"blocks\": [\r\n      {\r\n        \"type\": \"text\",\r\n        \"content\": \"Welcome to our platform!\"\r\n      },\r\n      {\r\n        \"type\": \"image\",\r\n        \"url\": \"https://example.com/welcome.png\"\r\n      }\r\n    ]\r\n  },\r\n  \"html\": \"<html><body><h1>Welcome!</h1></body></html>\", \r\n  \"layout\": {\r\n    \"header\": \"Welcome Header\",\r\n    \"footer\": \"Default Footer\"\r\n  },                                  \r\n  \"version\": \"published\",                // \"drafts\" | \"published\"\r\n  \"is_published\": true,              // boolean\r\n  \"thumbnail_url\": \"https://example.com/thumb.png\", // optional\r\n  \"type\": \"default\",                     // \"default\" | \"user\"\r\n  \"status\": true,                  // optional, can be null\r\n  \"updated_by\": null                  // optional, can be null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/templates/update/6e07323c-6285-41d2-985f-634511dbca1f",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"templates",
+								"update",
+								"6e07323c-6285-41d2-985f-634511dbca1f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view by uuid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": null,              \r\n  \"name\": \"Welcome Email Template\",\r\n  \"description\": \"This template is used for welcoming new users\",\r\n  \"model\": {\r\n    \"blocks\": [\r\n      {\r\n        \"type\": \"text\",\r\n        \"content\": \"Welcome to our platform!\"\r\n      },\r\n      {\r\n        \"type\": \"image\",\r\n        \"url\": \"https://example.com/welcome.png\"\r\n      }\r\n    ]\r\n  },\r\n  \"html\": \"<html><body><h1>Welcome!</h1></body></html>\", \r\n  \"layout\": {\r\n    \"header\": \"Welcome Header\",\r\n    \"footer\": \"Default Footer\"\r\n  },                                  \r\n  \"version\": \"published\",                // \"drafts\" | \"published\"\r\n  \"is_published\": true,              // boolean\r\n  \"thumbnail_url\": \"https://example.com/thumb.png\", // optional\r\n  \"type\": \"default\",                     // \"default\" | \"user\"\r\n  \"status\": true,                  // optional, can be null\r\n  \"updated_by\": null                  // optional, can be null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/templates/view/d65c6433-1535-4730-a79e-4190809b5ee4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"templates",
+								"view",
+								"d65c6433-1535-4730-a79e-4190809b5ee4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE-Email-Template",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": null,              \r\n  \"name\": \"Welcome Email Template\",\r\n  \"description\": \"This template is used for welcoming new users\",\r\n  \"model\": {\r\n    \"blocks\": [\r\n      {\r\n        \"type\": \"text\",\r\n        \"content\": \"Welcome to our platform!\"\r\n      },\r\n      {\r\n        \"type\": \"image\",\r\n        \"url\": \"https://example.com/welcome.png\"\r\n      }\r\n    ]\r\n  },\r\n  \"html\": \"<html><body><h1>Welcome!</h1></body></html>\", \r\n  \"layout\": {\r\n    \"header\": \"Welcome Header\",\r\n    \"footer\": \"Default Footer\"\r\n  },                                  \r\n  \"version\": \"published\",                // \"drafts\" | \"published\"\r\n  \"is_published\": true,              // boolean\r\n  \"thumbnail_url\": \"https://example.com/thumb.png\", // optional\r\n  \"type\": \"default\",                     // \"default\" | \"user\"\r\n  \"status\": true,                  // optional, can be null\r\n  \"updated_by\": null                  // optional, can be null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/templates/delete/6e07323c-6285-41d2-985f-634511dbca1f",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"templates",
+								"delete",
+								"6e07323c-6285-41d2-985f-634511dbca1f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Groups",
+			"item": [
+				{
+					"name": "Reordering groups",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"groups\": [\r\n    { \"id\": \"7b99642d-f45b-4744-8f58-e4e37b0c5dbf\", \"order\":3 },\r\n    { \"id\": \"5dbf9e16-09c1-4cbc-b7bf-148ac553e83f\", \"order\": 2 },\r\n    { \"id\": \"4e3dbd5a-ee60-4462-8185-50eb81da4575\", \"order\": 1 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/group/reorder",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"group",
+								"reorder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create-Elements-Group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Default\",\r\n    \"description\":\"Default block of elements\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/group/create",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"group",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Elements-Group",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Default 2\",\r\n    \"description\":\"Default block of elements\",\r\n    \"order\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/group/update/4e3dbd5a-ee60-4462-8185-50eb81da4575",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"group",
+								"update",
+								"4e3dbd5a-ee60-4462-8185-50eb81da4575"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Elements-Group",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/group/4e3dbd5a-ee60-4462-8185-50eb81da4575",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"group",
+								"4e3dbd5a-ee60-4462-8185-50eb81da4575"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Elements-Group",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/group/delete/4e3dbd5a-ee60-4462-8185-50eb81da4575",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"group",
+								"delete",
+								"4e3dbd5a-ee60-4462-8185-50eb81da4575"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List-Elements-Group-All",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/elements/list",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"elements",
+								"list"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "group",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Campaigns",
+			"item": [
+				{
+					"name": "welcome-campaigns-module",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/campaigns",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"campaigns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create-Campaigns",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsInBob25lIjoiODcxNDMzNDY3MSIsIndoYXRzYXBwIjoiODcxNDMzNDY3OCIsImZpcnN0TmFtZSI6InZpdmVrIiwibWlkZGxlTmFtZSI6IiIsImxhc3ROYW1lIjoiUmFqdSIsImlhdCI6MTc1OTE0NzcwNywiZXhwIjoxNzU5MTgzNzA3fQ.5q8eNGxnZIK5zShVG_lzwOLp2PkwjiXTBJSN1TBaYvY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Welcome New Users Campaign\",\r\n    \"templateId\": \"a2fb2d70-84fd-4893-b9b0-86df23076df1\",\r\n    \"fromName\": \"Acme Support\",\r\n    \"fromEmail\": \"support@yopmail.com\",\r\n    \"replyTo\": \"noreply@yopmail.com\",\r\n    \"subject\": \"Welcome to Acme Platform!\",\r\n    \"status\": \"sent\",\r\n    \"sendAt\": \"2025-09-22 14:50:00\",\r\n    \"audience\": [\r\n        \"aa258b81-295f-42ad-b482-9ee78ccc833f\",\r\n        \"d2844d5f-f6cf-453f-b704-02de79c9c617\",\r\n        \"aba5b6d7-4305-4360-bbfa-52bf0ac4ce83\"\r\n    ],\r\n    \"emails\":[\r\n        \"vivekraju1@yopmaail.com\",\r\n        \"vivekraju32@gmail.com\"\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/campaigns/create",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"campaigns",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List-Campaigns",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/campaigns/list?page=1&limit=10",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"campaigns",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "Welcome",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "draft",
+									"disabled": true
+								},
+								{
+									"key": "sendAt",
+									"value": "2025-10-01T00:00:00.000Z",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Campaigns",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZjU1MWZmYWQtMzg5OS00NDdjLWEyZGYtY2VlMWQ5N2EzMWUwIiwiZW1haWwiOiJ2aXZlazk1QHlvcG1haWwuY29tIiwicGhvbmUiOiI4NzE0MzM0Njc5Iiwid2hhdHNhcHAiOiI4NzE0MzM0Njc3IiwiZmlyc3ROYW1lIjpudWxsLCJtaWRkbGVOYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwiaWF0IjoxNzU4MTMxNTU0LCJleHAiOjE3NTgxNjc1NTR9.LONcjFhLn5lk0WBikgev56ZINhXkBxBwArsw8br6zdc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Welcome New User Campaign\",\r\n    \"templateId\": \"a2fb2d70-84fd-4893-b9b0-86df23076df1\",\r\n    \"fromName\": \"Modular framework Support\",\r\n    \"fromEmail\": \"support@mf.com\",\r\n    \"replyTo\": \"noreply@mf.com\",\r\n    \"subject\": \"Welcome to Modular framework Platform!\",\r\n    \"status\": \"sent\",\r\n    \"sendAt\": \"2025-10-01T10:00:00.000Z\",\r\n    \"audience\": [\r\n        \"aa258b81-295f-42ad-b482-9ee78ccc833f\",\r\n        \"d2844d5f-f6cf-453f-b704-02de79c9c617\",\r\n        \"aba5b6d7-4305-4360-bbfa-52bf0ac4ce83\"\r\n    ],\r\n    \"emails\":[\r\n        \"vivekraju1@yopmaail.com\",\r\n        \"vivekraju32@gmail.com\"\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/emailer/campaigns/update/90e576ca-f4fe-4410-b550-4669d4aea456",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"campaigns",
+								"update",
+								"90e576ca-f4fe-4410-b550-4669d4aea456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View by uuid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZjU1MWZmYWQtMzg5OS00NDdjLWEyZGYtY2VlMWQ5N2EzMWUwIiwiZW1haWwiOiJ2aXZlazk1QHlvcG1haWwuY29tIiwicGhvbmUiOiI4NzE0MzM0Njc5Iiwid2hhdHNhcHAiOiI4NzE0MzM0Njc3IiwiZmlyc3ROYW1lIjpudWxsLCJtaWRkbGVOYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwiaWF0IjoxNzU4MTMxNTU0LCJleHAiOjE3NTgxNjc1NTR9.LONcjFhLn5lk0WBikgev56ZINhXkBxBwArsw8br6zdc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/campaigns/view/90e576ca-f4fe-4410-b550-4669d4aea456",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"campaigns",
+								"view",
+								"90e576ca-f4fe-4410-b550-4669d4aea456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/emailer/campaigns/delete/50c5ca22-9aee-489a-9625-630f5b8320bd",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"emailer",
+								"campaigns",
+								"delete",
+								"50c5ca22-9aee-489a-9625-630f5b8320bd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Welcome-Emailer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/emailer",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"emailer"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

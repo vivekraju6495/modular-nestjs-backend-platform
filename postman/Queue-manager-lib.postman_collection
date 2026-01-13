@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "6e1c3a6c-c684-4420-9daa-4a107c9d4558",
+		"name": "Queue-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13669807",
+		"_collection_link": "https://modular-8519.postman.co/workspace/Modular-Framework~9b55a927-12cd-4e7c-a1f0-fd94130eb8c9/collection/13669807-6e1c3a6c-c684-4420-9daa-4a107c9d4558?action=share&source=collection_link&creator=13669807"
+	},
+	"item": [
+		{
+			"name": "Health checker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/queue-manager",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"queue-manager"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Queues",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/queue-manager/list",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"queue-manager",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Failed queue by queue name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/queue-manager/emailQueue/failed",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"queue-manager",
+						"emailQueue",
+						"failed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Completed by name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/queue-manager/:queuename/completed",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"queue-manager",
+						":queuename",
+						"completed"
+					],
+					"variable": [
+						{
+							"key": "queuename",
+							"value": "emailQueue"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Completed by name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/queue-manager/:queueName/completed",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"queue-manager",
+								":queueName",
+								"completed"
+							],
+							"variable": [
+								{
+									"key": "queueName",
+									"value": "emailQueue"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Waiting by name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/queue-manager/:queueName/waiting",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"queue-manager",
+						":queueName",
+						"waiting"
+					],
+					"variable": [
+						{
+							"key": "queueName",
+							"value": "emailQueue"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Waiting by name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/queue-manager/emailQueue/waiting",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"queue-manager",
+								"emailQueue",
+								"waiting"
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Retry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/queue-manager/:queuename/retry/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"queue-manager",
+						":queuename",
+						"retry",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "queuename",
+							"value": "emailQueue"
+						},
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retry",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/queue-manager/:queuename/retry/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"queue-manager",
+								":queuename",
+								"retry",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "queuename",
+									"value": "emailQueue"
+								},
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "cancelled all deply queue",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/queue-manager/emailQueue/delayed/cancel-all",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"queue-manager",
+						"emailQueue",
+						"delayed",
+						"cancel-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " deply queueby name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/queue-manager/emailQueue/delayed",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"queue-manager",
+						"emailQueue",
+						"delayed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -103,6 +103,42 @@ This project can run fully in Docker with three containers:
 docker-compose up --build
 
 ---
+---
+### Access the Services
+
+* API: `http://localhost:3000`
+* Swagger docs: `http://localhost:3000/api/docs` *(to be added later)*
+
+> ⚠️ Make sure your `.env` file has service names for Docker:
+>
+> * `DB_HOST=postgres`
+> * `REDIS_URL=redis://redis:6379`
+
+---
+
+## 📬 Postman Collection
+
+You can use the Postman collection to test all APIs of this modular backend platform:
+
+- Download the collection
+- Import it into Postman
+- Make sure your `.env` is configured correctly
+- Run the APIs directly
+
+> 🔹 Note: Each library has its own endpoints and health check APIs (auth, auth-roles, contacts, email, emailer, company-profile)
+
+---
+
+## 📄 Environment Variables
+
+Add a `.env` file in the root of your project. You can copy from `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+**Example `.env.example`:**
+---
 
 ## 🧩 Open Source Collaboration
 

@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "de3a959d-714c-4216-8f9d-b8a41ebd3081",
+		"name": "Company-profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13669807",
+		"_collection_link": "https://modular-8519.postman.co/workspace/Modular-Framework~9b55a927-12cd-4e7c-a1f0-fd94130eb8c9/collection/13669807-de3a959d-714c-4216-8f9d-b8a41ebd3081?action=share&source=collection_link&creator=13669807"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsInBob25lIjoiODcxNDMzNDY3MSIsIndoYXRzYXBwIjoiODcxNDMzNDY3OCIsImZpcnN0TmFtZSI6InZpdmVrIiwibWlkZGxlTmFtZSI6IiIsImxhc3ROYW1lIjoiUmFqdSIsImlhdCI6MTc1ODk5MzYwMiwiZXhwIjoxNzU5MDI5NjAyfQ.i9aIe43h-k1o2dOOw4RgAAsyZCBRJF44LNGZnq1A6dY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_Name\":\"VR Solutions\",\r\n  \"about\":\"Software company\",\r\n  \"registrationNumber\": \"KA123456\",\r\n  \"industry\": \"Software\",\r\n  \"address1\": \"123 Main Street\",\r\n  \"address2\": \"Suite 400\",\r\n  \"city\": \"Bengaluru\",\r\n  \"state\": \"Karnataka\",\r\n  \"zipCode\": \"560001\",\r\n  \"country\": \"India\",\r\n  \"email\": \"contact@vr.com\",\r\n  \"phone\": \"+91-9876543210\",\r\n  \"companyLogo\": \"https://vr.com/logo.png\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/company/create",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"company",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsInBob25lIjoiODcxNDMzNDY3MSIsIndoYXRzYXBwIjoiODcxNDMzNDY3OCIsImZpcnN0TmFtZSI6InZpdmVrIiwibWlkZGxlTmFtZSI6IiIsImxhc3ROYW1lIjoiUmFqdSIsImlhdCI6MTc1ODQ3NDkyNywiZXhwIjoxNzU4NTEwOTI3fQ.VkCcWThCHup0vhBlCsc0sCNtRBy8wppjkxqat_Rz5U8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_Name\": \"TechNova Solutions\",\r\n  \"registrationNumber\": \"TN123456\",\r\n  \"industry\": \"Software\",\r\n  \"address1\": \"123 Main Street\",\r\n  \"address2\": \"Suite 400\",\r\n  \"city\": \"Bengaluru\",\r\n  \"state\": \"Karnataka\",\r\n  \"zipCode\": \"560001\",\r\n  \"country\": \"India\",\r\n  \"email\": \"contact@technova.com\",\r\n  \"phone\": \"+91-9876543210\",\r\n  \"companyLogo\": \"https://technova.com/logo.png\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{baseURL}}/company/list?page=1&limit=10&order=DESC",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"company",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "search",
+							"value": "john",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWFjYzdhMDItMjQ2YS00Y2NhLTg1N2QtMmFiOWNmYzgzNWVjIiwiZW1haWwiOiJ2aXZlazk1MUB5b3BtYWlsLmNvbSIsInBob25lIjoiODcxNDMzNDY3MSIsIndoYXRzYXBwIjoiODcxNDMzNDY3OCIsImZpcnN0TmFtZSI6InZpdmVrIiwibWlkZGxlTmFtZSI6IiIsImxhc3ROYW1lIjoiUmFqdSIsImlhdCI6MTc1ODgyMzQ0MSwiZXhwIjoxNzU4ODU5NDQxfQ.Z22g13FRKMQNRktEU5RST1ppp2b3xq-NLiEiqPMmfDU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_Name\": \"TechNova Solutions\",\r\n  \"about\":\"Software company\",\r\n  \"registrationNumber\": \"TN123456\",\r\n  \"industry\": \"Software\",\r\n  \"address1\": \"123 Main Street\",\r\n  \"address2\": \"Suite 400\",\r\n  \"city\": \"Bengaluru\",\r\n  \"state\": \"Karnataka\",\r\n  \"zipCode\": \"560001\",\r\n  \"country\": \"India\",\r\n  \"email\": \"contact@technova.com\",\r\n  \"phone\": \"+91-9876543210\",\r\n  \"companyLogo\": \"https://technova.com/logo.png\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/company/update/7b1aa67a-2b63-4739-ba85-767f297393bb",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"company",
+						"update",
+						"7b1aa67a-2b63-4739-ba85-767f297393bb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/company/delete/0bf395a0-e808-4cc9-a459-1559c734f3f4",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"company",
+						"delete",
+						"0bf395a0-e808-4cc9-a459-1559c734f3f4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View By Id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/company/view/7b1aa67a-2b63-4739-ba85-767f297393bb",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"company",
+						"view",
+						"7b1aa67a-2b63-4739-ba85-767f297393bb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Welcome",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/company",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"company"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
