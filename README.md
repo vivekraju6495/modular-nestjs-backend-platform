@@ -120,7 +120,7 @@ docker-compose up --build
 
 You can use the Postman collection to test all APIs of this modular backend platform:
 
-- Download the collection: [postman/modular-nestjs-backend.postman_collection.json](./postman/modular-nestjs-backend.postman_collection.json)
+- Download the collection
 - Import it into Postman
 - Make sure your `.env` is configured correctly
 - Run the APIs directly
