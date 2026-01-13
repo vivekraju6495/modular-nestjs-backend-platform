@@ -41,7 +41,7 @@ export class EmailService {
   async sendTestEmail() {
     const mailOptions = {
       from: this.fromEmail,
-      to: 'saitama.og@yopmail.fr',
+      to: 'example@yopmail.com',
       subject: 'Testing Email Service',
       text: 'This is a plain text body for testing.',
       html: '<h1>This is a test email</h1><p>Sent from NestJS</p>',
@@ -89,7 +89,7 @@ export class EmailService {
 
           <p>If you did not request this OTP, you can safely ignore this email.</p>
 
-          <p>Best regards,<br>Modular Framework Team</p>
+          <p>Best regards,<br>Modular nestJs backend platform Team</p>
         </div>
       `,
     };
@@ -145,7 +145,7 @@ export class EmailService {
 
           <p>This link and OTP will expire shortly. If you did not register, ignore this email.</p>
 
-          <p>Best regards,<br>Modular Framework Team</p>
+          <p>Best regards,<br>Modular nestJs backend platform Team</p>
         </div>
       `,
     };
@@ -174,7 +174,7 @@ export class EmailService {
         ${verifyLink}
 
         Best regards,
-        Modular Framework Team
+        Modular nestJs backend platform Team
       `,
       html: `
         <div style="font-family: Arial, sans-serif; line-height:1.6; color:#333;">
@@ -191,7 +191,7 @@ export class EmailService {
           <p>If the button above doesn't work, copy this link:</p>
           <p style="word-break: break-all; color:#0066cc;">${verifyLink}</p>
 
-          <p>Best regards,<br>Modular Framework Team</p>
+          <p>Best regards,<br>Modular nestJs backend platform Team</p>
         </div>
       `,
     };
@@ -213,7 +213,7 @@ export class EmailService {
 
     for (const job of jobs) {
       const mailOptions = {
-        from: `"${fromName || 'Modular Framework'}" <${fromEmail || this.fromEmail}>`,
+        from: `"${fromName || 'Modular nestJs backend platform'}" <${fromEmail || this.fromEmail}>`,
         to: job.email,
         subject: subject || 'Campaign Email',
         html: template?.html || '', // safer access
